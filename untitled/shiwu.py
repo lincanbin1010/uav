@@ -1,0 +1,47 @@
+#导包
+import  pymysql
+
+#初始化
+conn = None
+cursor = None
+
+try:
+#连接数据库
+    conn = pymysql.connect (
+    host= "localhost",
+    port= 3306,
+    user= "root",
+    password= "123456789",
+    database= "books",
+    autocommit= False
+    )
+
+#获取游标
+    cursor = conn.cursor()
+
+#执行SQL
+
+    sql = "INSERT  INTO t_book VALUES(6,'BA','2022-07-07','1','2','0')"
+    cursor.execute(sql)
+    print("影响结果总共行数：", cursor.rowcount)
+    print('-'*50)
+
+#raise Exception('出错了')
+
+    sql = "INSERT  INTO t_book VALUES(7,'CA','2022-07-07','1','2','0')"
+    cursor.execute(sql)
+    print("影响结果总共行数：", cursor.rowcount)
+
+#提交事务
+    conn.commit()
+
+except Exception as e:
+    conn.rollback()
+    print(e)
+
+finally:
+#关闭游标
+    cursor.close()
+
+#关闭连接
+    conn.close()
