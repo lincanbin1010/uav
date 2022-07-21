@@ -2,14 +2,13 @@
 class LoginApi:
 #初始化
     def __init__(self):
-        self.url_login = "http://192.168.1.93:7080/api/v2/login"
+        self.url_login = "http://183.6.112.146:7080/api/v2/index/login"
 
 #登录
-    def get_url_login(self,session,username,password,verify_code):
+    def get_url_login(self,session,username,password,vcode):
         login_data={
             "username" : username ,
             "password" : password ,
-            "verify_code" : verify_code
+            "vcode" : vcode
         }
-        return session.post(url=sel
-        f.url_login,data=login_data)
+        return session.post(url=self.url_login,data=login_data)
