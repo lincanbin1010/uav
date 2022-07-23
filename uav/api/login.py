@@ -1,8 +1,11 @@
 #封装被测试系统接口
+import app
+
+
 class LoginApi:
 #初始化
     def __init__(self):
-        self.url_login = "http://183.6.112.146:7080/api/v2/index/login"
+        self.url_login = app.BASE_URL+"/api/v2/index/login"
 
 #登录
     def get_url_login(self,session,username,password,vcode):

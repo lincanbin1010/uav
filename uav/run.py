@@ -9,8 +9,9 @@ import  time
 #封装测试套件
 suite =unittest.TestSuite()
 suite.addTest(unittest.makeSuite(TestLogin))
-suite.addTest(unittest.makeSuite(Testsearch))
-suite.addTest(unittest.makeSuite(Testlist))
+# suite =unittest.TestSuite()
+# suite.addTest(unittest.makeSuite(Testsearch))
+# suite.addTest(unittest.makeSuite(Testlist))
 
 #指定报告路径
 report = "./report/report-{}.html".format(time.strftime("%Y%m%d-%H%M%S"))

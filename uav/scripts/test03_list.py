@@ -34,11 +34,11 @@ class Testlist(unittest.TestCase):
 
     def setUp(self):
         self.list_api =listApi()
-        # self.session = requests.session()
+        self.session = requests.session()
 
-    # def tearDown(self):
-    #     if self.session:
-    #         self.session.close()
+    def tearDown(self):
+       if self.session:
+        self.session.close()
 
     @ parameterized.expand(build_data())
 
