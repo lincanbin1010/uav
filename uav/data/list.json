@@ -1,0 +1,13 @@
+{
+  "desc": "计划列表",
+  "airportId":"nest02",
+  "current":1,
+  "size":10,
+  "state":"",
+  "scheduleName":"",
+  "creator":"",
+  "startCreatetime":"",
+  "endCreatetime":"",
+  "orgPath":"",
+  "scheduleInspectionType":[0,1,2]
+}
