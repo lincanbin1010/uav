@@ -1,5 +1,7 @@
 from scripts.test01_db import TestLogin
 from tools.HTMLTestRunner import HTMLTestRunner
+from scripts.test02_search import Testsearch
+
 
 import unittest
 import  time
@@ -7,6 +9,7 @@ import  time
 #封装测试套件
 suite =unittest.TestSuite()
 suite.addTest(unittest.makeSuite(TestLogin))
+suite.addTest(unittest.makecase(Testsearch))
 
 #指定报告路径
 report = "./report/report-{}.html".format(time.strftime("%Y%m%d-%H%M%S"))

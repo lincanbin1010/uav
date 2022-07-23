@@ -10,7 +10,7 @@ class LoginApi:
     def get_verify_code(self,session):
         return session.get(self.url_verify)
 #登录
-    def get_url_login(self,session):
+    def get_url_login(self,session,username,password,verify_code):
         login_data={
             "username" : username ,
             "password" : password ,

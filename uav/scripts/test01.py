@@ -1,8 +1,11 @@
 import requests
 import unittest
+
+import app
 from api.login import LoginApi
 import json
 from parameterized import  parameterized
+
 
 #构造数据
 def build_data():
@@ -45,6 +48,13 @@ class TestLogin(unittest.TestCase):
         self.assertEqual(status_code,response.status_code)
         self.assertEqual(code,response.json().get("code"))
         self.assertIn(msg,response.json().get("msg"))
+
+        #获取token
+        app.Access_Token =response.json().get("data").get("token")
+        print(app.Access_Token)
+
+        app.headers_data["Access-Token"]=app.Access_Token
+        print(app.headers_data["Access-Token"])
 
 
 
