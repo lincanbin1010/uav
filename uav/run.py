@@ -1,18 +1,21 @@
 from scripts.test01 import TestLogin
 from tools.HTMLTestRunner import HTMLTestRunner
 from scripts.test02_search import Testsearch
-from scripts.test03_list import Testlist
-
+from scripts.test04_list import Testlist
+from scripts.test03_save import Testsave
+from scripts.test05_update import Testupdate
+from  scripts.test06_delete import Testdelete
 import unittest
 import time
 
 #封装测试套件
 suite =unittest.TestSuite()
 suite.addTest(unittest.makeSuite(TestLogin))
-# suite =unittest.TestSuite()
 suite.addTest(unittest.makeSuite(Testsearch))
+suite.addTest(unittest.makeSuite(Testsave))
 suite.addTest(unittest.makeSuite(Testlist))
-
+suite.addTest(unittest.makeSuite(Testupdate))
+suite.addTest(unittest.makeSuite(Testdelete))
 #指定报告路径
 report = "./report/report-{}.html".format(time.strftime("%Y%m%d-%H%M%S"))
 

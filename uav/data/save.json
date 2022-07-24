@@ -1,0 +1,21 @@
+
+[
+  {
+    "scheduleName":"计划新建测试-788",
+    "taskList": "",
+    "airportId":"lee0000",
+    "validDate":"2022-07-25",
+    "expireDate":"2022-07-25",
+    "scheduleType":5,
+    "scheduleInformation":"",
+    "totalRetry":2,
+    "startTime":"09:47:56",
+    "inspectionType":0,
+    "scheduleInspectionType":0,
+    "msg": "请求成功",
+    "status_code": 200,
+    "code": 1
+
+
+  }
+]

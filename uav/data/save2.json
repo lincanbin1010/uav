@@ -1,0 +1,16 @@
+
+[
+  {
+    "scheduleName":"计划新建测试-789",
+    "taskList":[{"index": 1, "task":app.RECORDS0, "length": "", "startTime": "19:47:56"}, {"index": 2,"task":app.RECORDS1, "length": "", "startTime": "19:51:17"}],
+    "airportId":"lee0000",
+    "validDate":"2022-07-25",
+    "expireDate":"2022-07-25",
+    "scheduleType":5,
+    "scheduleInformation":"",
+    "totalRetry":2,
+    "startTime":"09:47:56",
+    "inspectionType":0,
+    "scheduleInspectionType":0
+  }
+]
