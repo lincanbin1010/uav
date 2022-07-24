@@ -2,7 +2,7 @@ Access_Token =None
 
 #请求头数据
 headers_data ={
-    "Content-Type":"application/json",
+    "Content-Type":"application/json;charset=UTF-8",
     "Access-Token":Access_Token
 }
 

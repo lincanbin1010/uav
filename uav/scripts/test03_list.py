@@ -1,8 +1,9 @@
 from api.list import listApi
 import unittest
-import  requests
+import requests
 import json
-from parameterized import  parameterized
+from parameterized import parameterized
+
 
 #构造数据
 def build_data():
@@ -34,20 +35,21 @@ class Testlist(unittest.TestCase):
 
     def setUp(self):
         self.list_api =listApi()
-        self.session = requests.session()
+        # self.session = requests.session()
 
-    def tearDown(self):
-       if self.session:
-        self.session.close()
+    # def tearDown(self):
+    #     if self.session:
+    #         self.session.close()
 
     @ parameterized.expand(build_data())
 
 #计划列表查询
-    def test0_list_1(self,airportId,current,size,state,scheduleName,creator,startCreatetime,endCreatetime,orgPath,scheduleInspectionType, status_code, code, msg):
+    def test_list_ok(self,airportId,current,size,state,scheduleName,creator,startCreatetime,endCreatetime,orgPath,scheduleInspectionType,status_code,code,msg):
 
         #调用登录接口
-        response = self.list_api.get_list(self,airportId,current,size,state,scheduleName,creator,startCreatetime,endCreatetime,orgPath,scheduleInspectionType)
+        response = self.list_api.get_list(airportId,current,size,state,scheduleName,creator,startCreatetime,endCreatetime,orgPath,scheduleInspectionType)
         print(response.json())
+        print("##########------------###########")
         #断言
         self.assertEqual(status_code,response.status_code)
         self.assertEqual(code,response.json().get("code"))

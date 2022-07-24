@@ -28,36 +28,21 @@ def build_data():
 
 #创建测试类
 
-class Testsearch:
+class Testsearch(unittest.TestCase):
+
     def setUp(self):
         self.search_api =searchApi()
-
+        self.session = requests.session()
 
     def tearDown(self):
-        pass
-
-    # 构造数据
-    def build_data():
-        file = "./data/login.json"
-        test_data = []
-        with open(file, encoding="utf-8") as f:
-            json_data = json.load(f)  # 加载JSON文件数据
-            for case_data in json_data:
-                username = case_data.get("username")
-                password = case_data.get("password")
-                vcode = case_data.get("vcode")
-                status_code = case_data.get("status_code")
-                code = case_data.get("code")
-                msg = case_data.get("msg")
-                test_data.append((username, password, vcode, status_code, code, msg))
-                print(test_data)
-        return test_data
+        if self.session:
+            self.session.close()
 
     @parameterized.expand(build_data())
 
     #任务查询
     def test01_search(self,airportId,current,executor,size,subId,taskMode,status_code,code,msg):
-        response =self.search_api.get_search(self,airportId,current,executor,size,subId,taskMode)
+        response =self.search_api.get_search(self.session,airportId,current,executor,size,subId,taskMode)
         print(response.json())
         #断言
         self.assertEqual(status_code, response.status_code)

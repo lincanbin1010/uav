@@ -1,15 +1,18 @@
 [
   {
-  "desc": "计划列表",
-  "airportId":"lee0000",
-  "current":1,
-  "size":10,
-  "state":"",
-  "scheduleName":"",
-  "creator":"",
-  "startCreatetime":"",
-  "endCreatetime":"",
-  "orgPath":"",
-  "scheduleInspectionType":[0,1,2]
-}
+    "desc": "计划列表",
+    "airportId":"lee0000",
+    "current":1,
+    "size":10,
+    "state":"",
+    "scheduleName":"",
+    "creator":"",
+    "startCreatetime":"",
+    "endCreatetime":"",
+    "orgPath":"",
+    "scheduleInspectionType":[0,1,2],
+    "msg": "请求成功",
+    "status_code": 200,
+    "code": 1
+  }
 ]
