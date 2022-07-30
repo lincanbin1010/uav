@@ -1,0 +1,15 @@
+[
+  {
+    "routeName": "upload_test_line",
+    "airPortId":"",
+    "description":" ",
+    "routeType": "2",
+    "routeGroup": "0",
+    "comments": "0",
+    "substationId": "lee0000",
+    "fileType": "10",
+    "status_code": 200,
+    "code": 1,
+    "msg": "请求成功"
+  }
+]

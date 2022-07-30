@@ -7,6 +7,7 @@ from scripts.test05_update import Testupdate
 from scripts.test06_delete import Testdelete
 from scripts.test07_routeupload import Testrouteload
 from scripts.test08_searchroutid import TestSearchrouteid
+from scripts.test_postman import Testpostman
 import unittest
 import time
 
@@ -20,7 +21,8 @@ suite.addTest(unittest.makeSuite(TestLogin))
 # suite.addTest(unittest.makeSuite(Testupdate))
 # suite.addTest(unittest.makeSuite(Testdelete))
 # suite.addTest(unittest.makeSuite(Testrouteload))
-suite.addTest(unittest.makeSuite(TestSearchrouteid))
+# suite.addTest(unittest.makeSuite(TestSearchrouteid))
+suite.addTest(unittest.makeSuite(Testpostman))
 #指定报告路径
 report = "./report/report-{}.html".format(time.strftime("%Y%m%d-%H%M%S"))
 
