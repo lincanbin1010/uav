@@ -1,0 +1,18 @@
+[
+  {
+    "current": "1",
+    "size":"10",
+    "substationId":"lee0000 ",
+    "routeId": "",
+    "routeName": "",
+    "routeGroup": "0",
+    "routeType": "",
+    "startDate": "",
+    "endDate": "",
+    "airportId": "",
+    "msg": "请求成功",
+    "status_code": 200,
+    "code": 1
+
+  }
+]

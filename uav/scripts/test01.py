@@ -4,7 +4,7 @@ import unittest
 import app
 from api.login import LoginApi
 import json
-from parameterized import  parameterized
+from parameterized import parameterized
 
 
 #构造数据

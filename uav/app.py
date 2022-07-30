@@ -14,6 +14,13 @@ headers_data ={
     "Access-Token":Access_Token
 }
 
+#表单数据
+headers_FormData={
+    "Content-Type": "multipart/form-data",
+    "Access-Token": Access_Token
+
+}
+
 
 # BASE_URL="http://192.168.1.93:7080"
 BASE_URL="http://183.6.112.146:7080"

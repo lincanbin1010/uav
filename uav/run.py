@@ -4,18 +4,23 @@ from scripts.test02_search import Testsearch
 from scripts.test04_list import Testlist
 from scripts.test03_save import Testsave
 from scripts.test05_update import Testupdate
-from  scripts.test06_delete import Testdelete
+from scripts.test06_delete import Testdelete
+from scripts.test07_routeupload import Testrouteload
+from scripts.test08_searchroutid import TestSearchrouteid
 import unittest
 import time
+
 
 #封装测试套件
 suite =unittest.TestSuite()
 suite.addTest(unittest.makeSuite(TestLogin))
-suite.addTest(unittest.makeSuite(Testsearch))
-suite.addTest(unittest.makeSuite(Testsave))
-suite.addTest(unittest.makeSuite(Testlist))
-suite.addTest(unittest.makeSuite(Testupdate))
-suite.addTest(unittest.makeSuite(Testdelete))
+# suite.addTest(unittest.makeSuite(Testsearch))
+# suite.addTest(unittest.makeSuite(Testsave))
+# suite.addTest(unittest.makeSuite(Testlist))
+# suite.addTest(unittest.makeSuite(Testupdate))
+# suite.addTest(unittest.makeSuite(Testdelete))
+# suite.addTest(unittest.makeSuite(Testrouteload))
+suite.addTest(unittest.makeSuite(TestSearchrouteid))
 #指定报告路径
 report = "./report/report-{}.html".format(time.strftime("%Y%m%d-%H%M%S"))
 
