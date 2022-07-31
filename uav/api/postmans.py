@@ -7,7 +7,7 @@ import app
 class PostmanApi:
 #初始化
     def __init__(self):
-        self.url2= app.BASE_URL+"/api/v2/index/login"
+        self.url2= app.BASE_URL+"/api/v2/inspectionRoute/json"
 
 #登录
     def get_postman(self):
@@ -23,5 +23,6 @@ class PostmanApi:
             ('file',
              ('upload_test_line.json', open(r"E:\luyao\FILE\JMETER\upload_test_line.json", 'rb'), 'application/json'))
         ]
-
-        return requests.request("POST", url=self.url2, headers=app.headers_FormData, data=payload, files=files)
+        headers=app.headers_FormData
+        # return session.post( url=self.url2, headers=app.headers_FormData, data=payload, files=files)
+        return requests.request("POST", url=self.url2, headers=headers, data=payload, files=files)

@@ -1,5 +1,7 @@
 import unittest
 
+import requests
+
 from api.postmans import PostmanApi
 
 #创建测试类

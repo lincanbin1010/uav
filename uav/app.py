@@ -16,7 +16,7 @@ headers_data ={
 
 #表单数据
 headers_FormData={
-    # "Content-Type": "multipart/form-data",
+    # "Content-Type": "multipart/form-data;charset=UTF-8",
     "Access-Token": Access_Token
 
 }

@@ -20,9 +20,9 @@ suite.addTest(unittest.makeSuite(TestLogin))
 # suite.addTest(unittest.makeSuite(Testlist))
 # suite.addTest(unittest.makeSuite(Testupdate))
 # suite.addTest(unittest.makeSuite(Testdelete))
-# suite.addTest(unittest.makeSuite(Testrouteload))
+# # suite.addTest(unittest.makeSuite(Testrouteload))  此条NG
 # suite.addTest(unittest.makeSuite(TestSearchrouteid))
-suite.addTest(unittest.makeSuite(Testpostman))
+# suite.addTest(unittest.makeSuite(Testpostman))
 #指定报告路径
 report = "./report/report-{}.html".format(time.strftime("%Y%m%d-%H%M%S"))
 
