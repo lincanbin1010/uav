@@ -5,7 +5,7 @@ import app
 
 
 class RouteuploadApi:
-    def __int__(self):
+    def __init__(self):
         self.routeuploadUrl =app.BASE_URL + "/api/v2/inspectionRoute/json"
 
 

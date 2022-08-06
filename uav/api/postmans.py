@@ -24,5 +24,4 @@ class PostmanApi:
              ('upload_test_line.json', open(r"E:\luyao\FILE\JMETER\upload_test_line.json", 'rb'), 'application/json'))
         ]
         headers=app.headers_FormData
-        # return session.post( url=self.url2, headers=app.headers_FormData, data=payload, files=files)
         return requests.request("POST", url=self.url2, headers=headers, data=payload, files=files)

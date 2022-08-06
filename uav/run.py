@@ -8,6 +8,8 @@ from scripts.test06_delete import Testdelete
 from scripts.test07_routeupload import Testrouteload
 from scripts.test08_searchroutid import TestSearchrouteid
 from scripts.test_postman import Testpostman
+from scripts.test_tasksearch import TestTaskSearch
+
 import unittest
 import time
 
@@ -15,14 +17,16 @@ import time
 #封装测试套件
 suite =unittest.TestSuite()
 suite.addTest(unittest.makeSuite(TestLogin))
-# suite.addTest(unittest.makeSuite(Testsearch))
-# suite.addTest(unittest.makeSuite(Testsave))
-# suite.addTest(unittest.makeSuite(Testlist))
-# suite.addTest(unittest.makeSuite(Testupdate))
-# suite.addTest(unittest.makeSuite(Testdelete))
-# # suite.addTest(unittest.makeSuite(Testrouteload))  此条NG
-# suite.addTest(unittest.makeSuite(TestSearchrouteid))
-# suite.addTest(unittest.makeSuite(Testpostman))
+suite.addTest(unittest.makeSuite(Testsearch))
+suite.addTest(unittest.makeSuite(Testsave))
+suite.addTest(unittest.makeSuite(Testlist))
+suite.addTest(unittest.makeSuite(Testupdate))
+suite.addTest(unittest.makeSuite(Testdelete))
+suite.addTest(unittest.makeSuite(Testrouteload))
+suite.addTest(unittest.makeSuite(TestSearchrouteid))
+suite.addTest(unittest.makeSuite(Testpostman))
+suite.addTest(unittest.makeSuite(TestTaskSearch))
+
 #指定报告路径
 report = "./report/report-{}.html".format(time.strftime("%Y%m%d-%H%M%S"))
 

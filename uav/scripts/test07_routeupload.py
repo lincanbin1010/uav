@@ -44,6 +44,6 @@ class Testrouteload(unittest.TestCase):
         #response = self.RouteUpload_api.get_routeupload_url (routeName , airPortId , description, routeType, routeGroup, comments, substationId, fileType, files)
         print(response.json())
         #断言
-        self.assertEqual("200", response.status_code)
-        self.assertEqual("1", response.json().get("code"))
+        self.assertEqual(200, response.status_code)
+        self.assertEqual(1, response.json().get("code"))
         self.assertIn("请求成功", response.json().get("msg"))
