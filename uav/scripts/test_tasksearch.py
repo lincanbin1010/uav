@@ -1,4 +1,4 @@
-
+import app
 from api.taskserach import TaskSearchApi
 from parameterized import parameterized
 import requests
@@ -51,11 +51,9 @@ class TestTaskSearch(unittest.TestCase):
         self.assertEqual(code, response.json().get("code"))
         self.assertIn(msg, response.json().get("msg"))
 
-    #获取巡检任务record，用于save接口调用
-        # app.RECORDS1= response.json().get("data").get("records")[1]
-        # app.RECORDS0 = response.json().get("data").get("records")[0]
-        #
-        # print(app.RECORDS0 )
-        #
-        # print(app.RECORDS1 )
+    #获取任务ID
+        app.task_id_0 = response.json().get("data").get("records")[0].get("taskId")
+        app.task_id_1 = response.json().get("data").get("records")[1].get("taskId")
+        print(app.task_id_0)
+        print(app.task_id_1)
 

@@ -1,0 +1,18 @@
+[
+  {
+    "desc": "起飞点任务建立01",
+    "lat": 23.134817823223365,
+    "lon":113.24396977017585,
+    "name":"移动机库模块测试",
+    "takeOffOffset": 50,
+    "taskIdList": [],
+    "substationId": "lee0000",
+    "alt": 2.50,
+    "msg": "请求成功",
+    "status_code": 200,
+    "code": 1
+
+  }
+]
+
+

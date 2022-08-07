@@ -1,12 +1,11 @@
+import json
+import unittest
+class Ass(unittest.TestCase):
+    def get_ass(self,status_code,code,msg,response):
 
-class Ass:
+        self.assertEqual(status_code, response.status_code)
+        self.assertEqual(code, response.json().get("code"))
+        self.assertIn(msg, response.json().get("msg"))
 
-    def ass1(self,status_code,response):
-        a=self.assertEqual(status_code,response.status_code)
-        return a
-    def ass2(self,code,response):
-        b=self.assertEqual(code,response.json().get("code"))
-        return b
-    def ass3(self,msg,response):
-        c=self.assertIn(msg,response.json().get("msg"))
-        return c
+
+

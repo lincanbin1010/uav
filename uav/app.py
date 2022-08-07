@@ -5,6 +5,11 @@ Access_Token =None
 RECORDS1 =None
 RECORDS0 =None
 
+#tasksearch接口任务ID
+task_id_0 = None
+task_id_1 = None
+
+
 #list接口scheduleId
 SCHID =None
 

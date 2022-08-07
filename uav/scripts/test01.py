@@ -5,7 +5,7 @@ import app
 from api.login import LoginApi
 import json
 from parameterized import parameterized
-from utils import Ass
+
 
 #构造数据
 def build_data():
@@ -30,7 +30,6 @@ class TestLogin(unittest.TestCase):
 
     def setUp(self):
         self.login_api =LoginApi()
-        self.forAssert =Ass()
         self.session = requests.session()
 
     def tearDown(self):
@@ -45,14 +44,12 @@ class TestLogin(unittest.TestCase):
         #调用登录接口
         response = self.login_api.get_url_login(self.session,username,password,vcode)
         print(response.json())
+
         #断言
-        # self.forAssert.ass1(status_code,response)
-        # self.forAssert.ass2(code,response)
-        # self.forAssert.ass3(msg,response)
-        # # self.forAssert.AssetTest(response=response,status_code="200",code="1",msg="请求成功")
-        self.assertEqual(status_code,response.status_code)
-        self.assertEqual(code,response.json().get("code"))
-        self.assertIn(msg,response.json().get("msg"))
+        self.assertEqual(status_code, response.status_code)
+        self.assertEqual(code, response.json().get("code"))
+        self.assertIn(msg, response.json().get("msg"))
+
 
         #获取token
         app.Access_Token =response.json().get("data").get("token")
