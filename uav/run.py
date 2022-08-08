@@ -14,8 +14,10 @@ from scripts.test10_takeoffsave import Testtakeoffsave
 import unittest
 import time
 
+#测试用例批量封装
+# suite = unittest.TestLoader().discover("./scripts/","test01.py")
 
-#封装测试套件
+# TODO 封装测试套件
 suite =unittest.TestSuite()
 suite.addTest(unittest.makeSuite(TestLogin))
 # suite.addTest(unittest.makeSuite(Testsearch))
@@ -26,8 +28,8 @@ suite.addTest(unittest.makeSuite(TestLogin))
 # suite.addTest(unittest.makeSuite(Testrouteload))
 # suite.addTest(unittest.makeSuite(TestSearchrouteid))
 # suite.addTest(unittest.makeSuite(Testpostman))
-suite.addTest(unittest.makeSuite(TestTaskSearch))
-suite.addTest(unittest.makeSuite(Testtakeoffsave))
+# suite.addTest(unittest.makeSuite(TestTaskSearch))
+# suite.addTest(unittest.makeSuite(Testtakeoffsave))
 
 #指定报告路径
 report = "./report/report-{}.html".format(time.strftime("%Y%m%d-%H%M%S"))
