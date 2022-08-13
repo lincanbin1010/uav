@@ -31,7 +31,7 @@ class Testupdate(unittest.TestCase):
         self.update_api =updateApi()
 
     @parameterized.expand(build_data())
-    #调用update接口
+    #计划表审核
     def test05_update1(self,state,scheduleId,status_code,code,msg):
         self.scheduleId=app.SCHID
         scheduleId =self.scheduleId

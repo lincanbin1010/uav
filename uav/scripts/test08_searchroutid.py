@@ -51,3 +51,7 @@ class TestSearchrouteid(unittest.TestCase):
         self.assertEqual(code,response.json().get("code"))
         self.assertIn(msg,response.json().get("msg"))
 
+        #提取航线ID为全局变量
+        routeId0 = response.json().get("data").get("records")[0].get("routeId")
+        app.route_id_0 = routeId0
+        print(app.route_id_0)

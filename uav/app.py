@@ -10,10 +10,14 @@ RECORDS0 =None
 task_id_0 = None
 task_id_1 = None
 
-
 #list接口scheduleId
 SCHID =None
 
+#searchrouteid接口routeId
+route_id_0 = None
+
+#complexRoute生成航线接口 航线id
+complexRoute_id = None
 #请求头数据
 headers_data ={
     "Content-Type":"application/json;charset=UTF-8",

@@ -1,0 +1,16 @@
+[
+  {
+    "desc": "删除计划",
+    "id":"",
+    "speed":2,
+    "taskMode":0,
+    "airportId":"",
+    "initSpeed":8,
+    "returnMode":null,
+    "auxHeight":null,
+    "returnAlt":44,
+    "msg": "请求成功",
+    "status_code": 200,
+    "code": 1
+  }
+]

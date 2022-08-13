@@ -33,6 +33,7 @@ class Testtakeoffsave(unittest.TestCase):
         self.takeoffsave_api = takeoffsave.TakeoffSaveApi()
 
     @parameterized.expand(build_data())
+    #新建起飞点任务
     def test10_takeoffsave1(self, lat, lon, name, takeOffOffset, taskIdList,  substationId, alt, status_code, code, msg):
         self.taskIdList =["%s"%(app.task_id_0),"%s"%(app.task_id_1)]
         taskIdList = self.taskIdList
@@ -40,6 +41,7 @@ class Testtakeoffsave(unittest.TestCase):
         response = self.takeoffsave_api.get_takeoffurl(lat, lon, name, takeOffOffset, taskIdList, substationId, alt)
         print(response.json())
         print(taskIdList)
+
         #断言
         self.assertEqual(status_code,response.status_code)
         self.assertEqual(code,response.json().get("code"))

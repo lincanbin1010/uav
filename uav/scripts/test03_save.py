@@ -36,7 +36,7 @@ class Testsave(unittest.TestCase):
 
     @parameterized.expand(build_data())
 
-    #测试用例
+    #新建保存测试用例
     def test03_save1(self,scheduleName,taskList,airportId,validDate,expireDate,scheduleType,scheduleInformation,totalRetry,startTime,inspectionType,scheduleInspectionType,status_code,code,msg):
         #调用save接口
         self.taskList =[{"index": 1, "task":app.RECORDS0, "length": "", "startTime": "19:47:56"}, {"index": 2,"task":app.RECORDS1, "length": "", "startTime": "19:51:17"}]

@@ -1,0 +1,14 @@
+[
+  {
+    "desc": "生成航线",
+    "dbRouteId":"",
+    "speed":2,
+    "airportId":"",
+    "aerialDirection":1,
+    "returnMode":null,
+    "auxHeight":null,
+    "msg": "请求成功",
+    "status_code": 200,
+    "code": 1
+  }
+]

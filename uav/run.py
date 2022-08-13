@@ -8,9 +8,14 @@ from scripts.test05_update import Testupdate
 from scripts.test06_delete import Testdelete
 from scripts.test07_routeupload import Testrouteload
 from scripts.test08_searchroutid import TestSearchrouteid
+from scripts.test11_routeupdate import Testrouteupdate
+from scripts.test12_complexRoute import TestcomplexRoute
+from scripts.test13_predictFlyData import TestpredictFlyData
+from scripts.test14_uavtasksave import Testuavtasksave
 from scripts.test_postman import Testpostman
 from scripts.test_tasksearch import TestTaskSearch
 from scripts.test10_takeoffsave import Testtakeoffsave
+
 
 import unittest
 import time
@@ -30,7 +35,11 @@ suite.addTest(unittest.makeSuite(Testsearch))
 # suite.addTest(unittest.makeSuite(Testupdate))
 # suite.addTest(unittest.makeSuite(Testdelete))
 # suite.addTest(unittest.makeSuite(Testrouteload))
-# suite.addTest(unittest.makeSuite(TestSearchrouteid))
+suite.addTest(unittest.makeSuite(TestSearchrouteid))
+suite.addTest(unittest.makeSuite(Testrouteupdate))
+suite.addTest(unittest.makeSuite(TestcomplexRoute))
+suite.addTest(unittest.makeSuite(TestpredictFlyData))
+suite.addTest(unittest.makeSuite(Testuavtasksave))
 # suite.addTest(unittest.makeSuite(Testpostman))
 # suite.addTest(unittest.makeSuite(TestTaskSearch))
 # suite.addTest(unittest.makeSuite(Testtakeoffsave))

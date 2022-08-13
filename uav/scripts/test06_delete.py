@@ -31,7 +31,7 @@ class Testdelete(unittest.TestCase):
         self.delete_api =deleteApi()
 
     @parameterized.expand(build_data())
-    #调用update接口
+    #删除计划
     def test06_delete1(self,idList,airportId,status_code,code,msg):
 
         self.idList=[app.SCHID]
