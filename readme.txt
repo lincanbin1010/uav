@@ -13,3 +13,4 @@ import json data = {'name': 'tom', 'age': 20, 'country': '中国'} f = open('tem
 
 fixture
 
+git push timeout test
