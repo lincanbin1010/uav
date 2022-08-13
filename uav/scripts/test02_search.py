@@ -3,7 +3,7 @@ from api.search import searchApi
 from parameterized import  parameterized
 import requests
 import unittest
-
+from utils import get_ass
 import json
 
 #构造数据
@@ -45,10 +45,12 @@ class Testsearch(unittest.TestCase):
     def test01_search(self,airportId,current,executor,size,subId,taskMode,status_code,code,msg):
         response =self.search_api.get_search(self.session,airportId,current,executor,size,subId,taskMode)
         print(response.json())
+
+        get_ass(self, status_code, code, msg, response)
         #断言
-        self.assertEqual(status_code, response.status_code)
-        self.assertEqual(code, response.json().get("code"))
-        self.assertIn(msg, response.json().get("msg"))
+        # self.assertEqual(status_code, response.status_code)
+        # self.assertEqual(code, response.json().get("code"))
+        # self.assertIn(msg, response.json().get("msg"))
 
     #获取巡检任务record，用于save接口调用
         app.RECORDS1= response.json().get("data").get("records")[1]

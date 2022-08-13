@@ -8,6 +8,9 @@ from parameterized import parameterized
 
 
 #构造数据
+from utils import get_ass
+
+
 def build_data():
     file ="./data/login.json"
     test_data =[]
@@ -46,9 +49,10 @@ class TestLogin(unittest.TestCase):
         print(response.json())
 
         #断言
-        self.assertEqual(status_code, response.status_code)
-        self.assertEqual(code, response.json().get("code"))
-        self.assertIn(msg, response.json().get("msg"))
+        get_ass(self, status_code, code, msg, response)
+        # self.assertEqual(status_code, response.status_code)
+        # self.assertEqual(code, response.json().get("code"))
+        # self.assertIn(msg, response.json().get("msg"))
 
 
         #获取token
