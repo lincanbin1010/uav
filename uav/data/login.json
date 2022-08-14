@@ -4,9 +4,8 @@
     "username": "0000008",
     "password": "6Zdd93d0e4h404d5fa57Zz12ec5f770Cba958d5a",
     "vcode": "",
-    "msg": "请求成功",
     "status_code": 200,
-    "code": 1
+    "code": 1,
+    "msg": "请求成功"
   }
-
 ]
